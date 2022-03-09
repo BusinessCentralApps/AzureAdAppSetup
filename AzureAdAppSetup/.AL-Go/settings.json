@@ -1,5 +1,4 @@
 {
-
     "type":  "PTE",
     "country":  "us",
     "enablePerTenantExtensionCop":  false,
@@ -8,4 +7,5 @@
                    ],
     "testFolders":  [
 
-                    ]}
+                    ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "4c06eaff-c198-4764-94a4-b695861ce379",
+  "name": "AzureAdAppSetup",
+  "publisher": "Microsoft",
+  "version": "17.1.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "e6328152-bb29-4664-9dae-3bc7eaae1fd8",
+      "publisher": "Microsoft",
+      "name": "Email - Outlook REST API",
+      "version": "17.0.0.0"
+    },
+    {
+      "id": "aceb66c8-472e-437c-81d3-27e6c07d0f14",
+      "publisher": "Microsoft",
+      "name": "Email - Microsoft 365 Connector",
+      "version": "17.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "17.0.0.0",
+  "application": "17.1.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 50000
+    }
+  ],
+  "target": "OnPrem",
+  "showMyCode": true,
+  "runtime": "6.0"
+}
