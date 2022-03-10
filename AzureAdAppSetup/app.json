@@ -2,11 +2,11 @@
   "id":  "4c06eaff-c198-4764-94a4-b695861ce379",
   "name":  "AzureAdAppSetup",
   "publisher":  "Microsoft",
-  "version":  "17.0.18.0",
+  "version":  "18.0.0.0",
   "brief":  "",
   "description":  "",
-  "platform":  "17.0.0.0",
-  "runtime":  "6.0",
+  "platform":  "18.0.0.0",
+  "runtime":  "7.0",
   "logo":  "",
   "url":  "",
   "EULA":  "",
@@ -20,16 +20,16 @@
         "id": "e6328152-bb29-4664-9dae-3bc7eaae1fd8",
         "publisher": "Microsoft",
         "name": "Email - Outlook REST API",
-        "version": "17.0.0.0"
+        "version": "18.0.0.0"
       },
       {
         "id": "aceb66c8-472e-437c-81d3-27e6c07d0f14",
         "publisher": "Microsoft",
         "name": "Email - Microsoft 365 Connector",
-        "version": "17.0.0.0"
+        "version": "18.0.0.0"
       }
   ],
-  "application": "17.1.0.0",
+  "application": "18.0.0.0",
   "idRanges":  [
                    {
                        "from":  50000,

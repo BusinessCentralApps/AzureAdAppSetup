@@ -44,6 +44,10 @@ page 50000 AzureAdAppSetup
                 begin
                     SetupEMailAdApp(Value);
                 end;
+            'SetupAadApplication':
+                begin
+                    SetupAadApplication(Rec."Value");
+                end;
         end;
     end;
 
@@ -90,4 +94,30 @@ page 50000 AzureAdAppSetup
         end;
     end;
 
+    local procedure SetupAadApplication(argument: Text)
+    var
+        AadApplication: Record "Aad Application";
+        UserGroupMember: Record "User Group Member";
+        ClientId: Text;
+        Groups: List Of [Text];
+        i: Integer;
+    begin
+        ClientId := SelectStr(1, argument);
+        AadApplication.SetRange(AadApplication."Client ID", ClientId);
+        if not AadApplication.FindFirst then
+            AadApplication.Init;
+        AadApplication."Client ID" := ClientId;
+        AadApplication.Description := SelectStr(2, argument);
+        if not AadApplication.Modify(true) then begin
+            AadApplication.Insert(true);
+            AadApplication.CreateUserFromAADApplication();
+            Groups := SelectStr(3, argument).Split(':');
+            For i := 1 to Groups.Count do begin
+                UserGroupMember.Init();
+                UserGroupMember."User Security ID" := AadApplication."User ID";
+                UserGroupMember."User Group Code" := Groups.Get(i);
+                UserGroupMember.Insert(True);
+            end;
+        end;
+    end;
 }

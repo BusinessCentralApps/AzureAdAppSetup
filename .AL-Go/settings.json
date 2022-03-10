@@ -2,8 +2,8 @@
     "type":  "PTE",
     "country":  "w1",
     "enablePerTenantExtensionCop":  false,
-    "artifact":  "/onprem/17.1/w1/latest",
-    "applicationDependency":  "17.1.0.0",
+    "artifact":  "/onprem/18.0/w1/latest",
+    "applicationDependency":  "18.0.0.0",
     "skipUpgrade": true,
     "appFolders":  [
                        "AzureAdAppSetup"
@@ -11,5 +11,5 @@
     "testFolders":  [
 
                     ],
-    "RepoVersion":  "17.1"
+    "RepoVersion":  "18.0"
 }
