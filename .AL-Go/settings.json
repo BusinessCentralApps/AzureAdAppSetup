@@ -4,12 +4,12 @@
     "enablePerTenantExtensionCop":  false,
     "artifact":  "/onprem/18.0/w1/latest",
     "applicationDependency":  "18.0.0.0",
-    "skipUpgrade": true,
+    "skipUpgrade":  true,
     "appFolders":  [
                        "AzureAdAppSetup"
                    ],
     "testFolders":  [
 
                     ],
-    "RepoVersion":  "18.0"
+    "RepoVersion":  "19.0"
 }
