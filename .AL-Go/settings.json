@@ -4,6 +4,7 @@
     "enablePerTenantExtensionCop":  false,
     "artifact":  "/onprem/15.9/w1/latest",
     "applicationDependency":  "15.9.0.0",
+    "skipUpgrade": true,
     "appFolders":  [
                        "AzureAdAppSetup"
                    ],
