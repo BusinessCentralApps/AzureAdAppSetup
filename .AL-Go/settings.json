@@ -2,13 +2,13 @@
     "type":  "PTE",
     "country":  "w1",
     "enablePerTenantExtensionCop":  false,
-    "artifact":  "/onprem/15.0/w1/latest",
-    "applicationDependency":  "15.0.0.0",
+    "artifact":  "/onprem/15.9/w1/latest",
+    "applicationDependency":  "15.9.0.0",
     "appFolders":  [
                        "AzureAdAppSetup"
                    ],
     "testFolders":  [
 
                     ],
-    "RepoVersion":  "15.0"
+    "RepoVersion":  "15.9"
 }

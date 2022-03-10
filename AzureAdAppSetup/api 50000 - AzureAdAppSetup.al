@@ -53,7 +53,7 @@ page 50000 AzureAdAppSetup
 
         AzureAdAppSetup."Redirect URL" := AzureADMgt.GetRedirectUrl;
         AzureAdAppSetup."App ID" := SelectStr(1, argument);
-        AzureAdAppSetup.SetSecretKey(SelectStr(2, argument));
+        AzureAdAppSetup.SetSecretKeyToIsolatedStorage(SelectStr(2, argument));
 
         if not AzureAdAppSetup.Modify(true) then
             AzureAdAppSetup.Insert(true);
