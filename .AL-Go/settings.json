@@ -2,7 +2,7 @@
     "type":  "PTE",
     "country":  "w1",
     "enablePerTenantExtensionCop":  false,
-    "artifact":  "/onprem/15/w1/latest",
+    "artifact":  "/onprem/15.0/w1/latest",
     "applicationDependency":  "15.0.0.0",
     "appFolders":  [
                        "AzureAdAppSetup"
