@@ -1,39 +1,43 @@
 {
-  "id": "4c06eaff-c198-4764-94a4-b695861ce379",
-  "name": "AzureAdAppSetup",
-  "publisher": "Microsoft",
-  "version": "17.1.0.0",
-  "brief": "",
-  "description": "",
-  "privacyStatement": "",
-  "EULA": "",
-  "help": "",
-  "url": "",
-  "logo": "",
-  "dependencies": [
-    {
-      "id": "e6328152-bb29-4664-9dae-3bc7eaae1fd8",
-      "publisher": "Microsoft",
-      "name": "Email - Outlook REST API",
-      "version": "17.0.0.0"
-    },
-    {
-      "id": "aceb66c8-472e-437c-81d3-27e6c07d0f14",
-      "publisher": "Microsoft",
-      "name": "Email - Microsoft 365 Connector",
-      "version": "17.0.0.0"
-    }
-  ],
-  "screenshots": [],
-  "platform": "17.0.0.0",
-  "application": "17.1.0.0",
-  "idRanges": [
-    {
-      "from": 50000,
-      "to": 50000
-    }
-  ],
-  "target": "OnPrem",
-  "showMyCode": true,
-  "runtime": "6.0"
+  "id":  "4c06eaff-c198-4764-94a4-b695861ce379",
+  "name":  "AzureAdAppSetup",
+  "publisher":  "Microsoft",
+  "version":  "15.0.18.0",
+  "brief":  "",
+  "description":  "",
+  "platform":  "15.0.0.0",
+  "runtime":  "4.0",
+  "logo":  "",
+  "url":  "",
+  "EULA":  "",
+  "privacyStatement":  "",
+  "help":  "",
+  "target":  "OnPrem",
+  "screenshots":  [
+
+                  ],
+  "dependencies":  [
+                       {
+                           "appId":  "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
+                           "publisher":  "Microsoft",
+                           "name":  "System Application",
+                           "version":  "1.0.0.0"
+                       },
+                       {
+                           "appId":  "437dbf0e-84ff-417a-965d-ed2bb9650972",
+                           "publisher":  "Microsoft",
+                           "name":  "Base Application",
+                           "version":  "15.0.0.0"
+                       }
+                   ],
+  "idRanges":  [
+                   {
+                       "from":  50000,
+                       "to":  50000
+                   }
+               ],
+  "features":  [
+
+               ],
+  "showMyCode":  true
 }
