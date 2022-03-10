@@ -40,6 +40,10 @@ page 50000 AzureAdAppSetup
                 begin
                     SetupAzureAdApp(Value);
                 end;
+            'SetupEMailAdApp':
+                begin
+                    SetupEMailAdApp(Value);
+                end;
         end;
     end;
 
@@ -57,6 +61,33 @@ page 50000 AzureAdAppSetup
 
         if not AzureAdAppSetup.Modify(true) then
             AzureAdAppSetup.Insert(true);
+    end;
+
+    local procedure SetupEMailAdApp(argument: Text)
+    var
+        Setup: Record "Email - Outlook API Setup";
+        OAuth2: Codeunit "OAuth2";
+        RedirectURLTxt: Text;
+        EMailAccount: Record "Email - Outlook Account";
+        EMailConnector: Enum "EMail Connector";
+    begin
+        If not Setup.FindFirst() then begin
+            Setup.Init();
+            Setup.ClientId := CreateGuid();
+            Setup.ClientSecret := CreateGuid();
+            OAuth2.GetDefaultRedirectUrl(RedirectURLTxt);
+            Setup.RedirectURL := RedirectURLTxt;
+            IsolatedStorage.Set(Setup.ClientId, SelectStr(1, argument), DataScope::Module);
+            IsolatedStorage.Set(Setup.ClientSecret, SelectStr(2, argument), DataScope::Module);
+            Setup.Insert(true);
+        end;
+
+        if not EMailAccount.FindFirst() then begin
+            EMailAccount."Email Address" := SelectStr(3, argument);
+            EMailAccount.Name := UserId();
+            EMailAccount."Outlook API Email Connector" := EMailConnector::"Microsoft 365";
+            EMailAccount.Insert(true);
+        end;
     end;
 
 }
