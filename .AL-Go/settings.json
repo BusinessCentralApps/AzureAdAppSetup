@@ -1,6 +1,6 @@
 ﻿{
     "type":  "PTE",
-    "country":  "us",
+    "country":  "w1",
     "enablePerTenantExtensionCop":  false,
     "artifact":  "/onprem/15/w1/latest",
     "applicationDependency":  "15.0.0.0",
