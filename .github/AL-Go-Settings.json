@@ -1,5 +1,5 @@
 {
-  "templateUrl": "https://github.com/freddydk/AL-Go@nuget",
+  "templateUrl": "https://github.com/microsoft/AL-Go-PTE@preview",
   "type": "PTE",
-  "templateSha": "679d5cf17e51b1cd558453f429df6e59bf2ce95c"
+  "templateSha": "becb26e1f895fb75145bbc10535afb19c09bff5c"
 }
