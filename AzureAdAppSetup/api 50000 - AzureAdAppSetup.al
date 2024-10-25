@@ -55,13 +55,15 @@ page 50000 AzureAdAppSetup
     var
         AzureAdAppSetup: Record "Azure AD App Setup";
         AzureADMgt: Codeunit "Azure AD Mgt.";
+        SecretTxt: SecretText;
     begin
         if not AzureAdAppSetup.FindFirst then
             AzureAdAppSetup.Init;
 
         AzureAdAppSetup."Redirect URL" := AzureADMgt.GetRedirectUrl;
         AzureAdAppSetup."App ID" := SelectStr(1, argument);
-        AzureAdAppSetup.SetSecretKeyToIsolatedStorage(SelectStr(2, argument));
+        SecretTxt := SelectStr(2, argument);
+        AzureAdAppSetup.SetSecretKeyToIsolatedStorage(SecretTxt);
 
         if not AzureAdAppSetup.Modify(true) then
             AzureAdAppSetup.Insert(true);
@@ -97,7 +99,6 @@ page 50000 AzureAdAppSetup
     local procedure SetupAadApplication(argument: Text)
     var
         AadApplication: Record "Aad Application";
-        UserGroupMember: Record "User Group Member";
         ClientId: Text;
         Groups: List Of [Text];
         i: Integer;
@@ -111,13 +112,6 @@ page 50000 AzureAdAppSetup
         if not AadApplication.Modify(true) then begin
             AadApplication.Insert(true);
             AadApplication.CreateUserFromAADApplication();
-            Groups := SelectStr(3, argument).Split(':');
-            For i := 1 to Groups.Count do begin
-                UserGroupMember.Init();
-                UserGroupMember."User Security ID" := AadApplication."User ID";
-                UserGroupMember."User Group Code" := Groups.Get(i);
-                UserGroupMember.Insert(True);
-            end;
         end;
     end;
 }
