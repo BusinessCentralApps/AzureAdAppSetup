@@ -5,14 +5,14 @@
                                "type":  "al",
                                "request":  "launch",
                                "name":  "Local Sandbox",
-                               "server":  "http://demo25x",
+                               "server":  "http://bcserver",
                                "serverInstance":  "BC",
                                "port":  7049,
                                "tenant":  "default",
                                "authentication":  "UserPassword",
                                "startupObjectId":  22,
                                "startupObjectType":  "Page",
-                               "breakOnError":  true,
+                               "breakOnError":  true
                            }
                        ]
 }
